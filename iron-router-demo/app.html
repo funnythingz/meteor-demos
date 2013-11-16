@@ -1,0 +1,43 @@
+<head>
+  <title>iron-router-demo</title>
+</head>
+
+<body>
+
+</body>
+
+<template name="layoutTpl">
+  <nav>
+    <ul>
+      <li><a href="{{pathFor 'home'}}">{{homeNav}}</a></li>
+      <li><a href="{{pathFor 'about'}}">{{aboutNav}}</a></li>
+      <li><a href="{{pathFor 'contact'}}">{{contactNav}}</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    {{yield}}
+  </section>
+
+  <section>
+    {{yield 'footer'}}
+  </section>
+</template>
+
+<template name="homeTpl">
+  <h1>Home</h1>
+</template>
+
+<template name="aboutTpl">
+  <h1>About</h1>
+</template>
+
+<template name="contactTpl">
+  <h1>Contact</h1>
+</template>
+
+<template name="footerTpl">
+  <footer>
+    <p class="copyright"><small>&copy;{{copyright}}</small></p>
+  </footer>
+</template>
