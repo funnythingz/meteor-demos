@@ -8,9 +8,8 @@ if (Meteor.isClient) {
 Template['header'].helpers({
 
     title: () => {
-        return 'title';
+        return 'login demo';
     }
-
 
 });
 
