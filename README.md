@@ -1,3 +1,3 @@
-# meteor project demos
+# meteor demos
 
 Meteorでいろいろためしてみるところ
