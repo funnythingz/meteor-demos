@@ -1,7 +1,0 @@
-{
-  "packages": {
-    "typescript-compiler": {},
-    "iron-router": {},
-    "typescript-libs": {}
-  }
-}
