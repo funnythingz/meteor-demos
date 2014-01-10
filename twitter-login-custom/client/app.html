@@ -1,0 +1,17 @@
+<head>
+  <title>twitter-login-demo</title>
+</head>
+
+<body>
+  {{> login}}
+</body>
+
+<template name="login">
+  <section>
+    {{loginButtons}}
+
+    {{#if currentUser}}
+      {{currentUser.profile.login}}
+    {{/if}}
+  </section>
+</template>
