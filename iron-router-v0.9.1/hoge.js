@@ -5,17 +5,25 @@ if (Meteor.isClient) {
     });
 
     Router.map(function() {
+
         this.route('home', {
             path: '/',
             template: 'home'
         });
-    });
 
-    Router.map(function() {
         this.route('about', {
             path: '/about',
             template: 'about'
         });
+
+        this.route('show', {
+            path: '/hoge/:_id',
+            template: 'show',
+            data: function() {
+                return this.params._id;
+            }
+        });
+
     });
 
 }

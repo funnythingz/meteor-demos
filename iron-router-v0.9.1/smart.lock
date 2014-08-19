@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {}
+      "iron-router": {},
+      "tsc": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.9.1",
         "commit": "9a0e90952d4cb9d3a15451477699ce3e21d4fa73"
+      },
+      "tsc": {
+        "git": "https://github.com/jasonparekh/meteor-tsc.git",
+        "tag": "v1.0.9",
+        "commit": "994deaf7d174a404fec48002927d38c5cb03a8bc"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
