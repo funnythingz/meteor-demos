@@ -8,7 +8,10 @@ if (Meteor.isClient) {
 
         this.route('home', {
             path: '/',
-            template: 'home'
+            template: 'home',
+            data: function() {
+              return Session.get('hoge');
+            }
         });
 
         this.route('about', {
@@ -24,6 +27,12 @@ if (Meteor.isClient) {
             }
         });
 
+    });
+
+    Template.home.events({
+        "change #hoge": function() {
+            Session.set('hoge', $('#hoge').val());
+        }
     });
 
 }
