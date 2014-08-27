@@ -1,14 +1,35 @@
 <head>
   <title>v0.9.0</title>
 </head>
+<body></body>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
+<template name="layout">
+<nav>
+<ul>
+    <li><a href="{{pathFor 'home'}}">home</a></li>
+    <li><a href="{{pathFor 'about'}}">about</a></li>
+    <li><a href="{{pathFor 'contact'}}">contact</a></li>
+</ul>
+</nav>
+{{> yield}}
+</template>
 
-  {{> hello}}
-</body>
+<template name="notFound">
+<h1>not found</h1>
+</template>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="loading">
+<p>loading...</p>
+</template>
+
+<template name="home">
+<h1>{{title}}</h1>
+</template>
+
+<template name="about">
+<h1>{{title}}</h1>
+</template>
+
+<template name="contact">
+<h1>{{title}}</h1>
 </template>

@@ -1,19 +1,63 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
-  });
+    Router.configure({
+        layoutTemplate: 'layout',
+        notFoundTemplate: 'notFound',
+        loadingTemplate: 'loading'
+    });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
-  });
+    Router.map(function() {
+
+        this.route('home', {
+            path: '/',
+            controller: HomeController
+            //fastRender: true
+        });
+
+        this.route('about', {
+            path: '/about',
+            controller: AboutController
+            //fastRender: true
+        });
+
+        this.route('contact', {
+            path: '/contact',
+            controller: ContactController
+            //fastRender: true
+        });
+
+    });
+
+    var HomeController = RouteController.extend({
+        template: 'home'
+    });
+
+    var AboutController = RouteController.extend({
+        template: 'about'
+    });
+
+    var ContactController = RouteController.extend({
+        template: 'contact'
+    });
+
+    Template.home.helpers({
+        title: function() {
+            return 'home';
+        }
+    });
+
+    Template.about.helpers({
+        title: function() {
+            return 'about';
+        }
+    });
+
+    Template.contact.helpers({
+        title: function() {
+            return 'contact';
+        }
+    });
+
 }
 
 if (Meteor.isServer) {
