@@ -1,3 +1,10 @@
+///<reference path="./typings/lib.d.ts"/>
+///<reference path="./typings/meteor.d.ts"/>
+///<reference path="./typings/underscore.d.ts"/>
+///<reference path="./typings/jquery.d.ts"/>
+///<reference path="./typings/ironrouter.d.ts"/>
+
+
 if (Meteor.isClient) {
 
     Router.configure({
@@ -11,19 +18,16 @@ if (Meteor.isClient) {
         this.route('home', {
             path: '/',
             controller: HomeController
-            //fastRender: true
         });
 
         this.route('about', {
             path: '/about',
             controller: AboutController
-            //fastRender: true
         });
 
         this.route('contact', {
             path: '/contact',
             controller: ContactController
-            //fastRender: true
         });
 
     });
@@ -40,28 +44,25 @@ if (Meteor.isClient) {
         template: 'contact'
     });
 
-    Template.home.helpers({
+    Template["home"].helpers({
         title: function() {
             return 'home';
+        },
+        hoge: function() {
+            return "hoge";
         }
     });
 
-    Template.about.helpers({
+    Template["about"].helpers({
         title: function() {
             return 'about';
         }
     });
 
-    Template.contact.helpers({
+    Template["contact"].helpers({
         title: function() {
             return 'contact';
         }
     });
 
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
 }

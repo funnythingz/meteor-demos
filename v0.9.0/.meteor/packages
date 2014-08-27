@@ -8,4 +8,6 @@ autopublish
 insecure
 iron:router
 fourseven:scss
-
+orefalo:typescript-compiler
+handlebars
+underscore
