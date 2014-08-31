@@ -1,0 +1,17 @@
+<head>
+  <title>reactive</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <input type="text" id="inputMessage">
+  <button id="post">post</button>
+  <ul>
+    {{#each messages}}
+    <li>{{message}}</li>
+    {{/each}}
+  </ul>
+</template>
